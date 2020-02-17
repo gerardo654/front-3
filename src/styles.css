@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+p.card-text {
+  text-align: justify;
+}
+div.card-body > ul{
+  text-align: justify;
+}
+div.img-contacto{
+  padding: 10px;
+}
+div.contacto{
+  background-image: url("src/assets/img/contacto.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  box-shadow: 0px 10px #ebebeb;
+}

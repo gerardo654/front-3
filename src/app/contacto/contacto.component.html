@@ -1,0 +1,39 @@
+<div fxLayout="row">
+  <div fxFlex="50" fxLayoutAlign="center center">
+      <div class="card" style="width: 50%; height: 100%">
+        <div class="card-body" fxLayout="column" fxLayoutAlign="center start">
+          <h5 class="card-title">Contactame...</h5>
+            <form fxLayout="column" fxLayoutAlign="space-between center">
+              <input class="form-control campo" type="text" placeholder="Nombre" required [(ngModel)]="contacto"/>
+              <input class="form-control campo" type="email" placeholder="Email" required/>
+              <input class="form-control campo" type="tel" placeholder="Celular" required/>
+              <input class="btn btn-dark" type="submit" value="Enviar" (click) = "guardar()"/>
+            </form>
+        </div>
+      </div>
+  </div>
+  <div fxFlex="50">
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <div class="card" style="width: 50%;">
+        <div fxLayout="row" fxLayoutAlign="space-around center" class="img-contacto">
+          <div class="contacto"></div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Mi contacto...</h5>
+          <b>Celular:</b>
+          <div class="card">
+            <div class="card-body">
+              5548456246
+            </div>
+          </div>
+          <b>Email:</b>
+          <div class="card">
+            <div class="card-body">
+              ame_rainbow@hotmail.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

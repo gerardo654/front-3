@@ -1,0 +1,7 @@
+div.fondo{
+  background-image: url("src/assets/img/fondo-sakura.png");background-color: white;
+  background-repeat: repeat;
+  background-size: 100% 100%;
+  padding: 20px;
+  border-top: 2px solid #FFBBD0;
+}
