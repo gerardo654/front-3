@@ -1,18 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactoService } from '../services/contacto.service';
+import { ContactoForm } from '../modelos/contactoForm';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
-  styleUrls: ['./contacto.component.css']
+  styleUrls: ['./contacto.component.css'],
+  providers: [ContactoService]
 })
 export class ContactoComponent implements OnInit {
-
-  constructor( private contacto: ContactoService ) { }
+  contactoModel = new ContactoForm();
+  private emailResponse;
+  private truefalse = false;
+  constructor( private contactoService: ContactoService ) { }
 
   ngOnInit(): void {
   }
-  guardar(){
-    console.log("guardar")
+  onSubmit(f: NgForm) {
+    this.getInfo(this.contactoModel, f);
+  }
+  getInfo(info: ContactoForm, f: NgForm) {
+    console.log(info);
+    this.contactoService.sendInfo(info).subscribe(
+      respuesta => {
+        console.log(respuesta);
+      },
+      error => {
+        console.log('error: ' + error);
+      }
+    );
   }
 }

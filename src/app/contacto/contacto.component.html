@@ -3,11 +3,11 @@
       <div class="card" style="width: 50%; height: 100%">
         <div class="card-body" fxLayout="column" fxLayoutAlign="center start">
           <h5 class="card-title">Contactame...</h5>
-            <form fxLayout="column" fxLayoutAlign="space-between center">
-              <input class="form-control campo" type="text" placeholder="Nombre" required [(ngModel)]="contacto"/>
-              <input class="form-control campo" type="email" placeholder="Email" required/>
-              <input class="form-control campo" type="tel" placeholder="Celular" required/>
-              <input class="btn btn-dark" type="submit" value="Enviar" (click) = "guardar()"/>
+            <form (ngSubmit)="onSubmit(contactoForm);" #contactoForm="ngForm" fxLayout="column" fxLayoutAlign="space-between center">
+              <input [(ngModel)]="contactoModel.nombre" class="form-control campo" type="text" placeholder="Nombre" name="nombre"  maxlength="50" required/>
+              <input [(ngModel)]="contactoModel.email" class="form-control campo" type="email" placeholder="Email" name="email" maxlength="50" required/>
+              <input [(ngModel)]="contactoModel.celular" class="form-control campo" type="text" placeholder="Celular" name="celular" title="Formato: 5512345678" maxlength="10" pattern="[0-9]{10}" required/>
+              <input [disabled]="!contactoForm.form.valid" class="btn btn-dark" type="submit" value="Enviar"/>
             </form>
         </div>
       </div>

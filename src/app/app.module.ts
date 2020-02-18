@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ExperienciasComponent } from './experiencias/experiencias.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,11 +18,12 @@ import { ContactoComponent } from './contacto/contacto.component';
     ExperienciasComponent,
     ContactoComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FlexLayoutModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FlexLayoutModule,
+        FormsModule
+    ],
   providers: [
     ContactoService
   ],
