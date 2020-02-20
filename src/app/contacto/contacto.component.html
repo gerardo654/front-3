@@ -4,9 +4,10 @@
         <div class="card-body" fxLayout="column" fxLayoutAlign="center start">
           <h5 class="card-title">Contactame...</h5>
             <form (ngSubmit)="onSubmit(contactoForm);" #contactoForm="ngForm" fxLayout="column" fxLayoutAlign="space-between center">
-              <input [(ngModel)]="contactoModel.nombre" class="form-control campo" type="text" placeholder="Nombre" name="nombre"  maxlength="50" required/>
+              <input [(ngModel)]="contactoModel.nombre" #nombre="ngModel" class="form-control campo" type="text" placeholder="Nombre" name="nombre"  maxlength="50" required/>
               <input [(ngModel)]="contactoModel.email" class="form-control campo" type="email" placeholder="Email" name="email" maxlength="50" required/>
-              <input [(ngModel)]="contactoModel.celular" class="form-control campo" type="text" placeholder="Celular" name="celular" title="Formato: 5512345678" maxlength="10" pattern="[0-9]{10}" required/>
+              <input [(ngModel)]="contactoModel.celular" #celular="ngModel" class="form-control campo" type="text" placeholder="Celular" name="celular" title="Formato: 5512345678" maxlength="10" pattern="[0-9]{10}" required/>
+              <div [hidden]="!celular.errors">Errores</div>
               <input [disabled]="!contactoForm.form.valid" class="btn btn-dark" type="submit" value="Enviar"/>
             </form>
         </div>

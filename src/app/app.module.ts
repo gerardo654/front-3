@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
 // Servicios
 import { ContactoService } from './services/contacto.service';
 
@@ -9,7 +10,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ExperienciasComponent } from './experiencias/experiencias.component';
 import { ContactoComponent } from './contacto/contacto.component';
-import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [

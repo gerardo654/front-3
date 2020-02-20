@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {ContactoForm} from '../modelos/contactoForm';
+import {ContactoForm} from '../models/contactoForm';
 import { Observable } from 'rxjs/Observable';
 import {HttpClient, HttpResponse, HttpHeaders} from '@angular/common/http';
 import { map } from 'rxjs/operators';
